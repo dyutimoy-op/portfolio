@@ -5,121 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Dyutimoy Kundu</title>
     <link rel="stylesheet" href="style1.css">
-    
 </head>
 <body>
-
-    <header class="header">
-        <div class="container">
-            
-
-            <nav class="nav">
-                <ul class="nav_list">
-                    <li class="nav_item"><a href="#home" class="nav_link">Home</a></li>
-                    <li class="nav_item"><a href="#about" class="nav_link">About</a></li>
-                    <li class="nav_item"><a href="#skills" class="nav_link">Skills</a></li>
-                    <li class="nav_item"><a href="#projects" class="nav_link">Projects</a></li>
-                    <li class="nav_item"><a href="#contact" class="nav_link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="home" id="home">
-        <div class="container home__container">
-            <div class="home__content">
-                <h1 class="home__title">Hi, I'm Dyutimoy Kundu</h1>
-                <p class="home__subtitle">Aspiring Developer from India</p>
-                <p class="home__text">I'm a beginner programmer passionate about learning new technologies and building projects.</p>
+    <main class="container">
+        <section id="home">
+            <h1>Hi, I'm Dyutimoy Kundu</h1>
+            <p>Aspiring Developer from India</p>
+            <p>I'm a beginner programmer passionate about learning new technologies and building projects.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="card">
+                <p>Hello! I'm Dyutimoy Kundu, a passionate learner who's on a journey to master the art of programming.
+                My goal is to become a skilled developer and contribute meaningful solutions to real-world problems.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section__title">About Me</h2>
-            <div class="about__container">
-                <div class="about__text">
-                    <p>Hello! I'm Dyutimoy Kundu, a passionate learner who's on a journey to master the art of programming.
-                    My goal is to become a skilled developer and contribute meaningful solutions to real-world problems.</p>
-                </div>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="card">
+                <h3>Web Technologies I'm Learning</h3>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript basics</span>
             </div>
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section__title">My Skills</h2>
-            <div class="skills__container">
-                <div class="skill-card">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Tools & Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub</span>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>Tools &amp; Technologies</h3>
+                <span class="tag">VS Code</span>
+                <span class="tag">Git</span>
+                <span class="tag">GitHub</span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section__title">My Projects</h2>
-            <div class="projects__container">
-                <div class="project-card">
-                    <h3>Smart Calculator</h3>
-                    <p>A simple calculator application built with HTML, CSS, and JavaScript.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Student Result Dashboard</h3>
-                    <p>A dashboard to manage and display student results using web technologies.</p>
-                </div>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="card">
+                <h3>Smart Calculator</h3>
+                <p>A simple calculator application built with HTML, CSS, and JavaScript.</p>
             </div>
-        </div>
-    </section>
+            <div class="card">
+                <h3>Student Result Dashboard</h3>
+                <p>A dashboard to manage and display student results using web technologies.</p>
+            </div>
+        </section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section__title">Contact Me</h2>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>This is a practice form. It does not send messages.</p>
             <form id="contactForm" action="#">
                 <label for="name">Name</label>
-                <input type="text" id="name" required>
+                <input type="text" id="name" name="name" autocomplete="name" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" autocomplete="email" required>
 
                 <label for="message">Message</label>
-                <textarea id="message" required></textarea>
-                <button type="submit">Send</button>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Try the form</button>
+                <p id="formStatus" role="status"></p>
             </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__brand">
-                <h3>Dyutimoy Kundu</h3>
-                <p>Developer | Learner | Problem Solver</p>
-            </div>
-
-            <div class="footer-social">
-                <a href="https://github.com/dyutimoy-op/" class="social-link">GitHub</a>
-                <a href="https://www.instagram.com/dyutimoy_01/" class="social-link">Instagram</a>
-                <a href="#" class="social-link">LinkedIn</a>
-            </div>
-
-            <p class="footer__text">© 2026 Dyutimoy Kundu. All rights reserved.</p>
-        </div>
+    <footer>
+        <h3>Dyutimoy Kundu</h3>
+        <p>Developer | Learner | Problem Solver</p>
+        <a href="https://github.com/dyutimoy-op/">GitHub</a>
+        <a href="https://www.instagram.com/dyutimoy_01/">Instagram</a>
+        <p>&copy; 2026 Dyutimoy Kundu. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
